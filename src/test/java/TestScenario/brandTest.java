@@ -30,12 +30,12 @@ public class brandTest extends BaseTests {
 		// Brand PLP Page
 		PLPpage().ScrollPlp();
 		PLPpage().Sorting("Latest");
-		PLPpage().Filter("Category", "Apparel");
+		PLPpage().Filter("Category", "Footwear");
 		Add_Cart().ItemInfo("Test", "Test121@tester.com", "5878767895");
 
 		try {
 			pdp_page().Pdp_Page();
-			pdp_page().Ratings("Good", "Good Quality");
+			pdp_page().Ratings("Test", "Test");
 			pdp_page().SizeOfProduct();
 			pdp_page().Wishlist();
 			pdp_page().Scrolling();
@@ -50,7 +50,7 @@ public class brandTest extends BaseTests {
 
 		try {
 			pdp_page().Pdp_Page();
-			pdp_page().Ratings("Good", "Good Quality");
+			pdp_page().Ratings("Test", "Test");
 			pdp_page().SizeOfProduct();
 			pdp_page().Wishlist();
 			pdp_page().Scrolling();
@@ -68,7 +68,7 @@ public class brandTest extends BaseTests {
 		Check_Out().CheckOut("Cash on delivery");
 		Check_Out().CashOnDelivery();
 		Order_History().OrderHistory();
-		// tearDown();
+		
 	}
 
 	@DataProvider

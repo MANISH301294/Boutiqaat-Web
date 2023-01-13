@@ -9,7 +9,7 @@
       <class name="TestScenario.brandTest">
         <methods>
           <include name="initializeDriver"/>
-          <include name="CheckOutScenario" invocation-numbers="0"/>
+          <include name="ErrorValidationTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestScenario.brandTest -->

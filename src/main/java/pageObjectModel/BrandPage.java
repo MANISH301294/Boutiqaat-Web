@@ -32,7 +32,7 @@ public class BrandPage extends AbstractComponent {
 	@FindBy(xpath = "//div[@class='row alplhabet-grid']/a[@class='alphabutton']")
 	List<WebElement> AlphaBrands;
 	
-	@FindBy(id="Jack & Jones")
+	@FindBy(id="Fila")
 	WebElement name;
 	
 	@FindBy(xpath="(//div[@class='container pl-2']/ul/li)[3]")
@@ -51,7 +51,7 @@ public class BrandPage extends AbstractComponent {
 
 		// -----------------**Get the Alphabet and Select J**--------------
 		for (WebElement Item : AlphaBrands) {
-			if (Item.getText().equals("J")) {
+			if (Item.getText().equals("F")) {
 				Item.click();	
 			}}
 		waitforElementToAppear(name);
