@@ -78,5 +78,17 @@ public class brandTest extends BaseTests {
 
 		return new Object[][] { { data.get(0) } };
 	}
+	
+	
+	@Test
+public void ErrorValidationTest() throws InterruptedException
+{
+	//----------Launching the Application----------
+			LaunchApplication();
+			
+	//  -----------Login With Valid Credentials--------		
+			Login().LoginUser("Test-Manish@Boutiqaat.com", "Tester");
+			Login().alert_Success_Message();
+		
 
-}
+}}
