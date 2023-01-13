@@ -75,4 +75,8 @@ public class AddtoCartBlock extends AbstractComponent {
 		  }	  
 			  
               break;
-	}}}
+              
+              
+	}
+		 WaitforElementDisappear(2000);
+	}}

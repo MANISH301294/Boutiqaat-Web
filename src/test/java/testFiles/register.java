@@ -1,5 +1,7 @@
 package testFiles;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -9,8 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
-import junit.framework.Assert;
 
 
 
@@ -37,7 +37,7 @@ public class register {
 		Thread.sleep(2000L);
 	   String message = driver.findElement(By.cssSelector("div[role='alert']")).getText();
 	   System.out.println(message);
-	   Assert.assertEquals(message, "There is already an account with this email address.");
+	   AssertJUnit.assertEquals(message, "There is already an account with this email address.");
 	   driver.close();
 	}
 	
@@ -69,7 +69,7 @@ public class register {
 		Thread.sleep(4000L);
 	   String message1 = driver.findElement(By.cssSelector("div[role='alert']")).getText();
 	   System.out.println(message1);
-	   Assert.assertEquals(message1, "Customer successfully registered.");
+	   AssertJUnit.assertEquals(message1, "Customer successfully registered.");
 	    //------------- ** verify user name of registered user **----------------------
 	   Thread.sleep(3000L);
 
@@ -78,7 +78,7 @@ public class register {
 	   
 	   String check = username.substring(4);
 	   System.out.println(check);
-	   Assert.assertEquals(check,"Automation Test" );
+	   AssertJUnit.assertEquals(check,"Automation Test" );
 	   
 	   // ------------------------------**Get The Registered Email**-----------------
 	   driver.findElement(By.xpath("//div[@class='links register']/a")).click();

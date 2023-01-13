@@ -7,7 +7,6 @@ import java.util.Set;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -25,8 +24,7 @@ public class Celebritypage extends AbstractComponent {
 
 	}
 
-	@FindBy(xpath = "//ul[@class='navbar-nav']/li")
-	List<WebElement> navBar;
+	
 
 	@FindBy(xpath = "//h1[text()='Celebrities']/parent::a/parent::li")
 	WebElement Celebrities;
@@ -54,16 +52,16 @@ public class Celebritypage extends AbstractComponent {
 
 	@FindBy(xpath = "//a[@href='/en-kw/men/'][normalize-space()='Yousef Al Mohammed']")
 	WebElement ConfirmCeleb;
+	
+	 @FindBy(xpath="//div[@class='links'][2]")
+	  WebElement wish;
+	 
+	
 
-	public void Nav() throws InterruptedException {
-		WaitforElementDisappear(2000);
-		for (WebElement nav : navBar) {
-			System.out.println(nav.getText());
-			Actions a = new Actions(driver);
-			a.moveToElement(nav, 0, navBar.size()).build().perform();
-		
-		}
-	}
+	
+	
+	
+	
 
 	// ----------------------**Celebrity page -------------------
 	public void Clebrity() throws InterruptedException {
@@ -100,13 +98,12 @@ public class Celebritypage extends AbstractComponent {
 		Alpha_H.click();
 		WaitforElementDisappear(2000);
 		System.out.println("No. of celebs whose name start with 'H' = " + FilterCeleb.size());
-		WaitforElementDisappear(2000);
+		WaitforElementDisappear(3000);
 	}
-
 	// ----------------------**Search with Name** -------------------
 	public void SearchCeleb(String CelebName) throws InterruptedException {
 		CelebSearch.sendKeys(CelebName);
-		WaitforElementDisappear(2000);
+		WaitforElementDisappear(3000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 		for (WebElement FilterName : FilterCeleb) {
@@ -116,6 +113,7 @@ public class Celebritypage extends AbstractComponent {
 			}
 		}
 		WaitforElementDisappear(2000);
+	System.out.println("Celebrity Name = "+CelebName);
 		Assert.assertEquals(CelebName,ConfirmCeleb.getText());
 	}
 

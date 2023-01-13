@@ -38,7 +38,7 @@ public class BrandPage extends AbstractComponent {
 	@FindBy(xpath="(//div[@class='container pl-2']/ul/li)[3]")
 	WebElement brandName;
 
-	public void Brand() {
+	public void Brand() throws InterruptedException {
 		navBrand.click();
 		// ---------------**Move element to different place**-------------
 		Actions a = new Actions(driver);
@@ -55,6 +55,7 @@ public class BrandPage extends AbstractComponent {
 				Item.click();	
 			}}
 		waitforElementToAppear(name);
+		WaitforElementDisappear(2000);
 		    name.click();
 		    waitforElementToAppear(brandName);
 	}

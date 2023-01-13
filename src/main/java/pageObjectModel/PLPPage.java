@@ -50,8 +50,8 @@ public class PLPPage  extends AbstractComponent {
 		  WaitforElementDisappear(2000);
 		  System.out.println("No. of product in plp = "+plpItem.size());
 		  WaitforElementDisappear(2000);
-		  LoginPage login =new LoginPage(driver);
-		  login.BackToTop.click();
+		  HomePage home =new HomePage(driver);
+		  home.Back_to_Top();
 		  WaitforElementDisappear(2000);
 		  
 	}
@@ -59,17 +59,17 @@ public class PLPPage  extends AbstractComponent {
 		{
 			Select dropdown = new Select(sort);
 			dropdown.selectByVisibleText(SortMethod);
-			WaitforElementDisappear(2000);
+			WaitforElementDisappear(3000);
 			System.out.println("sort = " + dropdown.getFirstSelectedOption().getText());	  
 	}
 		
 		public void Filter(String FilterName,String subCat) throws InterruptedException
 		{
 			// ----------------** Filter By Category **----------------------------------
-			WaitforElementDisappear(2000);
+			WaitforElementDisappear(3000);
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			js.executeScript("window.scrollBy(0,700)");
-			WaitforElementDisappear(2000);
+			WaitforElementDisappear(3000);
 			for (WebElement filter : filters) {
 				if (filter.getText().equals(FilterName)) {
 					System.out.println("SubCategories are = " + catfltr.size());
@@ -85,10 +85,7 @@ public class PLPPage  extends AbstractComponent {
 					break;
 				}
 				break;
-			}
-
-		
+			}		
 		}
-
 	
 }

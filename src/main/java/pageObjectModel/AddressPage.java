@@ -13,6 +13,8 @@ import abstractComponent.AbstractComponent;
 public class AddressPage extends AbstractComponent {
 
 	WebDriver driver;
+  
+   
 
 	public AddressPage(WebDriver driver) {
 		super(driver);
@@ -72,40 +74,44 @@ public class AddressPage extends AbstractComponent {
 
 	@FindBy(id = "id_number")
 	WebElement civil_Id;
-
-	public void Add_Address() throws InterruptedException {
+	 
+	public void Add_Address(String Name,String Area,String Block,String Street,String Villa,String Mobile,String Address,String City,String Civil) throws InterruptedException {
 		String Currency = crncy.getText();
+		
+		WaitforImplicitWait(10);
 		System.out.println(Currency);
 //---------------Kuwait----------------------		
 		if (Currency.equalsIgnoreCase(Kuwait)) {
 			Continue.click();
 			
-			WaitforElementDisappear(2000);
+			WaitforElementDisappear(3000);
 			try {
 				AddNew.isDisplayed();
-				FirstName.sendKeys("Kuwai");
+				FirstName.sendKeys(Name);
 				Select drop = new Select(area);
-				drop.selectByVisibleText("Abu Halifa");
+				drop.selectByVisibleText(Area);
 				WaitforElementDisappear(2000);
 				Select drpdwn = new Select(block);
-				drpdwn.selectByVisibleText("2");
-				street.sendKeys("k-7/149");
-				villa.sendKeys("145");
-				telephone.sendKeys("4647678987");
+				drpdwn.selectByVisibleText(Block);
+				street.sendKeys(Street);
+				villa.sendKeys(Villa);
+				telephone.sendKeys(Mobile);
 				WaitforElementDisappear(2000);
 				submit.click();
 			} catch (NoSuchElementException e) {
 				ConfirmAddress.isDisplayed();
+				WaitforElementDisappear(1000);
 				AddNewAddress.click();
-				FirstName.sendKeys("Kuwait");
+				WaitforElementDisappear(1000);
+				FirstName.sendKeys(Name);
 				Select drop = new Select(area);
-				drop.selectByVisibleText("Abu Halifa");
+				drop.selectByVisibleText(Area);
 				WaitforElementDisappear(2000);
 				Select drpdwn = new Select(block);
-				drpdwn.selectByVisibleText("2");
-				street.sendKeys("k-7/149");
-				villa.sendKeys("145");
-				telephone.sendKeys("4647678987");
+				drpdwn.selectByVisibleText(Block);
+				street.sendKeys(Street);
+				villa.sendKeys(Villa);
+				telephone.sendKeys(Mobile);
 				WaitforElementDisappear(2000);
 				submit.click();
 			}
@@ -207,8 +213,7 @@ public class AddressPage extends AbstractComponent {
 				WebElement city = driver.findElement(By.id("city"));
 				Select drop = new Select(city);
 				drop.selectByVisibleText("Capital Governorate");
-				WebElement Area = driver.findElement(By.id("region_area"));
-				Select drpdwn = new Select(Area);
+				Select drpdwn = new Select(area);
 				drpdwn.selectByVisibleText("Seef");
 				telephone.sendKeys("8687687564");
 				WaitforElementDisappear(2000);
@@ -258,34 +263,34 @@ public class AddressPage extends AbstractComponent {
 			WaitforElementDisappear(2000);
 			try {
 				AddNew.isDisplayed();
-				FirstName.sendKeys("Iraqian");
-				AddressLine.sendKeys("1123 Iraq");
+				FirstName.sendKeys(Name);
+				AddressLine.sendKeys(Address);
 				Select drop = new Select(city);
-				drop.selectByVisibleText("Al Najaf");
+				drop.selectByVisibleText(City);
 				Select drpdwn = new Select(area);
-				drpdwn.selectByVisibleText("Al Qadisiya");
+				drpdwn.selectByVisibleText(Area);
 				telephone.sendKeys("9375893243");
 				WaitforElementDisappear(2000);
 				submit.click();
 			}
-
 			catch (NoSuchElementException e) {
 				ConfirmAddress.isDisplayed();
+				WaitforElementDisappear(1000);
 				AddNewAddress.click();
-				FirstName.sendKeys("Iraqin");
-				AddressLine.sendKeys("1165 Iraq");
+				WaitforElementDisappear(1000);
+				FirstName.sendKeys(Name);
+				AddressLine.sendKeys(Address);
 				Select drop = new Select(city);
-				drop.selectByVisibleText("Mousl (Nainawa)");
+				drop.selectByVisibleText(City);
 				Select drpdwn = new Select(area);
-				drpdwn.selectByVisibleText("Al Qayara");
-				telephone.sendKeys("9375843243");
+				drpdwn.selectByVisibleText(Area);
+				telephone.sendKeys("9375893243");
 				WaitforElementDisappear(2000);
 				submit.click();
 
 			}
 
 		}
-
 		// -----------------Oman-------------
 		else if (Currency.equalsIgnoreCase(Oman)) {
 			Continue.click();
@@ -321,4 +326,5 @@ public class AddressPage extends AbstractComponent {
 		WaitforElementDisappear(2000);
 
 	}
+	
 }

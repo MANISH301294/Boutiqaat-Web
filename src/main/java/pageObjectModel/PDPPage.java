@@ -22,7 +22,6 @@ public class PDPPage extends AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
 	@FindBy(xpath = "//div[@class='col-md-7']/div[@class='product-info']/h1")
 	WebElement ProdName;
 
@@ -94,7 +93,7 @@ public class PDPPage extends AbstractComponent {
 
 	@FindBy(xpath = "//button[@class='btn addtocart btn-secondary']")
 	WebElement Buy;
-
+	
 	public void Pdp_Page() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(ProdName));
@@ -161,7 +160,7 @@ public class PDPPage extends AbstractComponent {
 			 {
 				Select.click();
 			}
-			WaitforElementDisappear(2000);
+			WaitforElementDisappear(3000);
 		}
 		quantity.click();
 	}
@@ -183,23 +182,27 @@ public class PDPPage extends AbstractComponent {
 	public void Scrolling() throws InterruptedException {
 
 		for (WebElement i : ImagesNo) {
+			i.getText();
 			RightNav.click();
-			//WaitforElementDisappear();
+			WaitforElementDisappear(1000);
 		}
 		for (WebElement i : ImagesNo) {
+			i.getText();
 			LeftNav.click();
-			//WaitforElementDisappear();
+			WaitforElementDisappear(1000);
 		}
 
 		fullScreen.click();
 		WaitforElementDisappear(2000);
 		for (WebElement i : ImagesNo) {
+			i.getText();
 			RightNav.click();
-			//WaitforElementDisappear();
+			WaitforElementDisappear(1000);
 		}
 		for (WebElement i : ImagesNo) {
+			i.getText();
 			LeftNav.click();
-			//WaitforElementDisappear();
+			WaitforElementDisappear(1000);
 		}
 		CloseFullScreen.click();
 		WaitforElementDisappear(2000);

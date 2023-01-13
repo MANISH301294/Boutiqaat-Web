@@ -56,16 +56,30 @@ public class OrderHistoryPage extends AbstractComponent {
 	@FindBy(xpath="//button[@class='btn w-100 goldenBtn toolTipCont mt-2']/span")
 	WebElement trackInfo;
 	
-	public void Order()
+	@FindBy(xpath="//h5")
+	WebElement NoOrder;
+	
+	
+	
+	public void AccountPage()
 	{
 		waitforElementToAppear(account);
 		account.click();
 		waitforElementToAppear(DashBoard);
 		myOrders.click();
+	}
+	
+	
+	public void OrderPage()
+	{
+	
 		waitforElementToAppear(self_center);
 		System.out.println(self_center.getText());
+		
+		try {
 		for(WebElement OrderDetails:OrdrHstry)
 		{
+			OrderDetails.getText();
 			System.out.println(OrdrDtls.getText());	
 		}
 		OrderDetals.click();
@@ -76,6 +90,33 @@ public class OrderHistoryPage extends AbstractComponent {
 		Actions a = new Actions(driver);
 		a.click(track).moveToElement(trackInfo).build().perform();
 		System.out.println(trackInfo.getText());
-
+	     }
+		
+		catch(Exception e)
+		{
+			System.out.println(NoOrder.getText());
+		}
+}
+	
+	public void OrderHistory()
+	{
+		
+		try {
+			waitforElementToAppear(text_center);
+			System.out.println(text_center.getText());
+			System.out.println(Grand_Total.getText());
+			System.out.println(item_Details.getText());
+			Actions a = new Actions(driver);
+			a.click(track).moveToElement(trackInfo).build().perform();
+			System.out.println(trackInfo.getText());
+		     }
+			
+			catch(Exception e)
+			{
+				System.out.println(NoOrder.getText());
+			}
+			
+		
+		
 	}
 }

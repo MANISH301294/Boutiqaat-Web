@@ -63,6 +63,13 @@ public class AbstractComponent {
 		Thread.sleep(time);
 	}
 	
+	public void WaitforImplicitWait(long time)
+	{
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
+	}
+	
+	
+	
 	
 	
 }

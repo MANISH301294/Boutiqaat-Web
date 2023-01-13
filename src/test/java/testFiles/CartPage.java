@@ -8,17 +8,20 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CartPage {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Manish\\Documents\\Grid\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -33,6 +36,11 @@ public class CartPage {
 		
 		//**------------------MiniCartItem**------------
 		driver.findElement(By.xpath("//div[@class='minicart']")).click();
+		WebElement t = driver.findElement(By.xpath("//div[@class='minicart']"));
+		String s = t.getCssValue("color");
+		String c = Color.fromString(s).asHex();
+		System.out.println("color is"+s);
+		System.out.println("Hex is"+ c);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//p[@class='mincart-text']"))));
 		String CartItm = driver.findElement(By.xpath("//p[@class='mincart-text']/strong")).getText();
@@ -112,7 +120,7 @@ public class CartPage {
 	    driver.findElement(By.xpath("//button[@class='wishlist btn-secondary col-12']")).click();
 	    Thread.sleep(2000);
 	  System.out.println(driver.findElement(By.xpath("//p/p")).getText());
-	  driver.findElement(By.xpath("//button[@type='button']")).click();
+//	  driver.findElement(By.xpath("//button[@type='button']")).click();
 	}    
 	}
 

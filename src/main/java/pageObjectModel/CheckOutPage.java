@@ -50,6 +50,15 @@ public class CheckOutPage extends AbstractComponent {
 	@FindBy(css="a[class='logo']")
 	WebElement BoutiHomePage;
 	
+	@FindBy(xpath="//span[@class='payment-successmsg']")
+	WebElement OrderSuccess;
+	
+	@FindBy(xpath="(//div/div/span[@class='text-address'])[1]")
+	WebElement OrderNo;
+	
+	@FindBy(xpath="(//button[normalize-space()='VIEW ORDER'])[1]")
+	WebElement viewOrder;
+	
 	public void CheckOut(String PaymentMethods) throws InterruptedException {
 
 		try {
@@ -60,7 +69,8 @@ public class CheckOutPage extends AbstractComponent {
 			for (WebElement method : PaymentMethod) {
 				System.out.println(method.getText());
 				if (method.getText().contains(PaymentMethods)) {
-					radio.click();
+					method.click();
+					break;
 				}
 			}
 
@@ -68,11 +78,15 @@ public class CheckOutPage extends AbstractComponent {
 			for (WebElement method : PaymentMethod) {
 				System.out.println(method.getText());
 				if (method.getText().contains(PaymentMethods)) {
-					radio.click();
+					method.click();
+					break;
 				}
 			}
-
-		}
+			
+		}}
+	
+	public void KNetPayment()
+	{
 
 		chekout.click();
 		waitforElementToAppear(gateway);
@@ -80,6 +94,18 @@ public class CheckOutPage extends AbstractComponent {
 		cancelPayment.click();
 		waitforElementToAppear(ConfirmCancelPayment);
 		BoutiHomePage.click();
+			
+	}
+	
+	public void CashOnDelivery() throws InterruptedException
+	{
+		chekout.click();
+		waitforElementToAppear(OrderSuccess);
+		System.out.println(OrderSuccess.getText());
+		System.out.println("Order No. = "+OrderNo.getText());
+		WaitforElementDisappear(2000);
+		viewOrder.click();
+		
 		
 	}
 	

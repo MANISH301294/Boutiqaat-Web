@@ -1,0 +1,26 @@
+[
+	{
+
+		"Name"      : "Kuwait",
+		"Area"      : "Al Qadisiya",
+		"Block"     : "2",
+		"Street"    : "k-7/149",
+		"Villa"     : "145",
+		"Mobile"    : "4673838272",
+		"Address"   :"113,AD Nagar",
+		"City"      :"Al Najaf",
+		"Civil"     :"8798687898"
+	},
+    
+    {
+        "Name"      : "Kuwait",
+		"Area"      : "Abu Halifa",
+		"Block"     : "2",
+		"Street"    : "k-7/149",
+		"Villa"     : "145",
+		"Mobile"    : "4673838272",
+		"Address"   :"113,AD Nagar",
+		"City"      :"Dubai",
+		"Civil"     :"8798687898"    }
+
+]

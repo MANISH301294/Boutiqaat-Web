@@ -38,9 +38,11 @@ public class MiniCartPage extends AbstractComponent {
 	public void MiniCart() throws InterruptedException
 	{
 		//**------------------MiniCartItem**------------
-		waitforElementToAppear(minicart);
+		//waitforElementToAppear(minicart);
+		        WaitforElementDisappear(3000);
 				minicart.click();
 				waitforElementToAppear(CartItem);
+				WaitforElementDisappear(2000);
 				System.out.println("No. of items in Mini cart = "+CartItem.getText());
 				for(WebElement CartProd:minicartProd)
 				{

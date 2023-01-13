@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="FinalTest(failed)">
+  <listeners>
+    <listener class-name="baseTest.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="brandTest(failed)">
     <classes>
-      <class name="TestScenario.FinalTest">
+      <class name="TestScenario.brandTest">
         <methods>
-          <include name="AllScenario"/>
+          <include name="initializeDriver"/>
+          <include name="CheckOutScenario" invocation-numbers="0"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestScenario.FinalTest -->
+      </class> <!-- TestScenario.brandTest -->
     </classes>
-  </test> <!-- FinalTest(failed) -->
+  </test> <!-- brandTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
