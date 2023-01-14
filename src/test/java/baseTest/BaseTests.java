@@ -1,12 +1,14 @@
 package baseTest;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -14,6 +16,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -45,13 +51,38 @@ public class BaseTests {
 	LoginPage login;
 
 	@BeforeTest
-	public WebDriver initializeDriver()
-
+	public WebDriver initializeDriver() throws IOException
 	{
+	Properties prop = new Properties();
+	FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//java//resources//GlobalData.properties");
+	prop.load(fis);
+	
+	String browserName =  prop.getProperty("browser");
+
+	
+		if(browserName.equalsIgnoreCase("chrome"))
+		{
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("incognito");
 		driver = new ChromeDriver(options);
+		}
+		if(browserName.equalsIgnoreCase("firefox"))
+		{
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("incognito");
+			driver = new FirefoxDriver(options);
+			
+		}
+		
+		if(browserName.equalsIgnoreCase("edgeDriver"))
+		{
+			WebDriverManager.edgedriver().setup();
+			EdgeOptions option = new EdgeOptions();
+			option.addArguments("incognito");
+			driver = new EdgeDriver(option);
+		}
 		driver.manage().window().maximize();
 		return driver;
 	}

@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-13T22:17:16 IST" name="Suite" finished-at="2023-01-13T22:21:03 IST" duration-ms="227095">
+  <suite started-at="2023-01-15T02:13:10 IST" name="Suite" finished-at="2023-01-15T02:18:20 IST" duration-ms="309491">
     <groups>
     </groups>
-    <test started-at="2023-01-13T22:17:16 IST" name="brandTest" finished-at="2023-01-13T22:21:03 IST" duration-ms="227095">
+    <test started-at="2023-01-15T02:13:10 IST" name="brandTest" finished-at="2023-01-15T02:18:20 IST" duration-ms="309491">
       <class name="TestScenario.brandTest">
-        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:TestScenario.brandTest@8519cb4]" started-at="2023-01-13T22:17:16 IST" name="initializeDriver" finished-at="2023-01-13T22:17:20 IST" duration-ms="3999" status="PASS">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:TestScenario.brandTest@d737b89]" started-at="2023-01-15T02:13:10 IST" name="initializeDriver" finished-at="2023-01-15T02:13:15 IST" duration-ms="4882" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="CheckOutScenario(java.util.HashMap)[pri:0, instance:TestScenario.brandTest@8519cb4]" started-at="2023-01-13T22:17:20 IST" name="CheckOutScenario" data-provider="getData" finished-at="2023-01-13T22:20:45 IST" duration-ms="205136" status="PASS">
+        <test-method signature="CheckOutScenario(java.util.HashMap)[pri:0, instance:TestScenario.brandTest@d737b89]" started-at="2023-01-15T02:13:15 IST" name="CheckOutScenario" data-provider="getData" finished-at="2023-01-15T02:18:03 IST" duration-ms="287730" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,25 +22,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckOutScenario -->
-        <test-method signature="ErrorValidationTest()[pri:0, instance:TestScenario.brandTest@8519cb4]" started-at="2023-01-13T22:20:45 IST" name="ErrorValidationTest" finished-at="2023-01-13T22:21:02 IST" duration-ms="16924" status="FAIL">
+        <test-method signature="ErrorValidationTest()[pri:0, instance:TestScenario.brandTest@d737b89]" started-at="2023-01-15T02:18:03 IST" name="ErrorValidationTest" finished-at="2023-01-15T02:18:19 IST" duration-ms="15812" status="FAIL">
           <exception class="org.openqa.selenium.json.JsonException">
             <message>
               <![CDATA[java.lang.reflect.InvocationTargetException
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a405ed3bbfdc8da4d187a5c50ef6947f, actions {actions=[org.openqa.selenium.interactions.Sequence@19002b34]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:60219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:60219/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a405ed3bbfdc8da4d187a5c50ef6947f]]>
+Command: [f833dd8103ca34440b76184457cadc7b, actions {actions=[org.openqa.selenium.interactions.Sequence@5817f1ca]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:65245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:65245/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f833dd8103ca34440b76184457cadc7b]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a405ed3bbfdc8da4d187a5c50ef6947f, actions {actions=[org.openqa.selenium.interactions.Sequence@19002b34]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:60219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:60219/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a405ed3bbfdc8da4d187a5c50ef6947f
+Command: [f833dd8103ca34440b76184457cadc7b, actions {actions=[org.openqa.selenium.interactions.Sequence@5817f1ca]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:65245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:65245/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f833dd8103ca34440b76184457cadc7b
 at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
 at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
 at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
@@ -117,9 +117,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a405ed3bbfdc8da4d187a5c50ef6947f, findElement {using=link text, value=Log In}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:60219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:60219/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a405ed3bbfdc8da4d187a5c50ef6947f
+Command: [f833dd8103ca34440b76184457cadc7b, findElement {using=link text, value=Log In}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:65245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:65245/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f833dd8103ca34440b76184457cadc7b
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -149,7 +149,7 @@ at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethod
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ErrorValidationTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScenario.brandTest@8519cb4]" started-at="2023-01-13T22:21:03 IST" name="tearDown" finished-at="2023-01-13T22:21:03 IST" duration-ms="248" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScenario.brandTest@d737b89]" started-at="2023-01-15T02:18:19 IST" name="tearDown" finished-at="2023-01-15T02:18:20 IST" duration-ms="246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
