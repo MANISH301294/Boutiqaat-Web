@@ -22,7 +22,7 @@ public class PDPpage {
 		WebDriver driver = new ChromeDriver();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-		String size = "XL";
+		
 		String wish = "Added to Wishlist";
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

@@ -37,7 +37,7 @@ public class OrderHistory {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("div p.align-self-center"))));
 		System.out.println(driver.findElement(By.cssSelector("div p.align-self-center")).getText());
 		List<WebElement> orderId = driver.findElements(By.cssSelector("div.card.card-body.order-history"));
-		for(WebElement OrderDetails:orderId)
+		for(@SuppressWarnings("unused") WebElement OrderDetails:orderId)
 		{
 			System.out.println(driver.findElement(By.cssSelector("div.col-md-9")).getText());
 			//System.out.println(OrderDetails.getText());	
