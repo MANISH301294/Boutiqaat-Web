@@ -162,7 +162,8 @@ public class PDPPage extends AbstractComponent {
 			}
 			WaitforElementDisappear(3000);
 		}
-		quantity.click();
+		
+		//quantity.click();
 	}
 
 	// wish list

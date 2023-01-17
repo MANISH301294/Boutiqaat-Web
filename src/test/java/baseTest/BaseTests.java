@@ -65,6 +65,7 @@ public class BaseTests {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("incognito");
+		
 		driver = new ChromeDriver(options);
 		}
 		if(browserName.equalsIgnoreCase("firefox"))
