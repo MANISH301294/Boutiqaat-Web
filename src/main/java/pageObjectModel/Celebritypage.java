@@ -24,8 +24,6 @@ public class Celebritypage extends AbstractComponent {
 
 	}
 
-	
-
 	@FindBy(xpath = "//h1[text()='Celebrities']/parent::a/parent::li")
 	WebElement Celebrities;
 
@@ -55,13 +53,6 @@ public class Celebritypage extends AbstractComponent {
 	
 	 @FindBy(xpath="//div[@class='links'][2]")
 	  WebElement wish;
-	 
-	
-
-	
-	
-	
-	
 
 	// ----------------------**Celebrity page -------------------
 	public void Clebrity() throws InterruptedException {

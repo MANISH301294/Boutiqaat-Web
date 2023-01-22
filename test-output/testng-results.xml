@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="1" total="3" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-17T13:12:44 IST" name="Suite" finished-at="2023-01-17T13:18:52 IST" duration-ms="368333">
+  <suite started-at="2023-01-22T21:56:35 IST" name="BrandTest" finished-at="2023-01-22T22:01:31 IST" duration-ms="296012">
     <groups>
     </groups>
-    <test started-at="2023-01-17T13:12:44 IST" name="brandTest" finished-at="2023-01-17T13:18:52 IST" duration-ms="368333">
-      <class name="TestScenario.brandTest">
-        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:TestScenario.brandTest@8519cb4]" started-at="2023-01-17T13:12:44 IST" name="initializeDriver" finished-at="2023-01-17T13:12:50 IST" duration-ms="6169" status="PASS">
+    <test started-at="2023-01-22T21:56:35 IST" name="FinalTest" finished-at="2023-01-22T21:58:37 IST" duration-ms="121955">
+      <class name="TestScenario.FinalTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:TestScenario.FinalTest@7188af83]" started-at="2023-01-22T21:56:35 IST" name="initializeDriver" finished-at="2023-01-22T21:56:40 IST" duration-ms="4925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="CheckOutScenario(java.util.HashMap)[pri:0, instance:TestScenario.brandTest@8519cb4]" started-at="2023-01-17T13:12:51 IST" name="CheckOutScenario" data-provider="getData" finished-at="2023-01-17T13:18:35 IST" duration-ms="344240" status="PASS">
+        <test-method signature="AllScenario(java.util.HashMap)[pri:0, instance:TestScenario.FinalTest@7188af83]" started-at="2023-01-22T21:56:40 IST" name="AllScenario" data-provider="getData" finished-at="2023-01-22T21:58:36 IST" duration-ms="115937" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -19,107 +19,28 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckOutScenario -->
-        <test-method signature="ErrorValidationTest()[pri:0, instance:TestScenario.brandTest@8519cb4]" started-at="2023-01-17T13:18:35 IST" name="ErrorValidationTest" finished-at="2023-01-17T13:18:52 IST" duration-ms="16734" status="FAIL">
-          <exception class="org.openqa.selenium.json.JsonException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[java.lang.reflect.InvocationTargetException
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6', java.version: '18.0.2.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b63856efda1bc664a0eaa5de6a5b0af3, actions {actions=[org.openqa.selenium.interactions.Sequence@3d6778d5]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:52212}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52212/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b63856efda1bc664a0eaa5de6a5b0af3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6', java.version: '18.0.2.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b63856efda1bc664a0eaa5de6a5b0af3, actions {actions=[org.openqa.selenium.interactions.Sequence@3d6778d5]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:52212}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52212/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b63856efda1bc664a0eaa5de6a5b0af3
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
-at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
-at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
-at org.openqa.selenium.json.Json.toJson(Json.java:42)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:122)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:609)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-at pageObjectModel.LoginPage.LoginUser(LoginPage.java:52)
-at TestScenario.brandTest.ErrorValidationTest(brandTest.java:90)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6', java.version: '18.0.2.1'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
-at org.openqa.selenium.json.Json.toJson(Json.java:40)
-... 36 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
-... 57 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Log In"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='/en-kw/men/'][normalize-space()='Yousef Al Mohammed']"}
   (Session info: chrome=109.0.5414.87)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b63856efda1bc664a0eaa5de6a5b0af3, findElement {using=link text, value=Log In}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:52212}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52212/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b63856efda1bc664a0eaa5de6a5b0af3
+Command: [8fee52776b51a8b4fa90d44ec7a13055, findElement {using=xpath, value=//a[@href='/en-kw/men/'][normalize-space()='Yousef Al Mohammed']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:57558}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:57558/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8fee52776b51a8b4fa90d44ec7a13055]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='/en-kw/men/'][normalize-space()='Yousef Al Mohammed']"}
+  (Session info: chrome=109.0.5414.87)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.6', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8fee52776b51a8b4fa90d44ec7a13055, findElement {using=xpath, value=//a[@href='/en-kw/men/'][normalize-space()='Yousef Al Mohammed']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.87, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/lf/cf4ds6ts1_d...}, goog:chromeOptions: {debuggerAddress: localhost:57558}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:57558/devtoo..., se:cdpVersion: 109.0.5414.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8fee52776b51a8b4fa90d44ec7a13055
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -136,24 +57,63 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
-at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:260)
-at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:209)
-at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
-at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
+at jdk.proxy2/jdk.proxy2.$Proxy19.getText(Unknown Source)
+at pageObjectModel.Celebritypage.SearchCeleb(Celebritypage.java:108)
+at TestScenario.FinalTest.AllScenario(FinalTest.java:60)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-... 59 more
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ErrorValidationTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScenario.brandTest@8519cb4]" started-at="2023-01-17T13:18:52 IST" name="tearDown" finished-at="2023-01-17T13:18:52 IST" duration-ms="314" status="PASS">
+        </test-method> <!-- AllScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScenario.FinalTest@7188af83]" started-at="2023-01-22T21:58:37 IST" name="tearDown" finished-at="2023-01-22T21:58:37 IST" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestScenario.FinalTest -->
+    </test> <!-- FinalTest -->
+    <test started-at="2023-01-22T21:56:35 IST" name="brandTest" finished-at="2023-01-22T22:01:31 IST" duration-ms="296012">
+      <class name="TestScenario.brandTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:TestScenario.brandTest@350aac89]" started-at="2023-01-22T21:56:35 IST" name="initializeDriver" finished-at="2023-01-22T21:56:40 IST" duration-ms="4925" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="CheckOutScenario(java.util.HashMap)[pri:0, instance:TestScenario.brandTest@350aac89]" started-at="2023-01-22T21:56:40 IST" name="CheckOutScenario" data-provider="getData" finished-at="2023-01-22T22:01:31 IST" duration-ms="290573" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Area=Al Qadisiya, Civil=8798687898, Villa=145, Address=113,AD Nagar, Block=2, Street=k-7/149, City=Al Najaf, Mobile=4673838272, Name=Kuwait}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckOutScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestScenario.brandTest@350aac89]" started-at="2023-01-22T22:01:31 IST" name="tearDown" finished-at="2023-01-22T22:01:31 IST" duration-ms="216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestScenario.brandTest -->
     </test> <!-- brandTest -->
-  </suite> <!-- Suite -->
+  </suite> <!-- BrandTest -->
 </testng-results>
