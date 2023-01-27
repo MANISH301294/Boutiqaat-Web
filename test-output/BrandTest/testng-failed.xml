@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="baseTest.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="FinalTest(failed)">
+  <test thread-count="5" parallel="tests" name="brandTest(failed)">
     <classes>
-      <class name="TestScenario.FinalTest">
+      <class name="TestScenario.brandTest">
         <methods>
           <include name="initializeDriver"/>
+          <include name="ErrorValidationTest"/>
           <include name="tearDown"/>
-          <include name="AllScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- TestScenario.FinalTest -->
+      </class> <!-- TestScenario.brandTest -->
     </classes>
-  </test> <!-- FinalTest(failed) -->
+  </test> <!-- brandTest(failed) -->
 </suite> <!-- Failed suite [BrandTest] -->

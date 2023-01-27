@@ -7,9 +7,7 @@
   <test  name="brandTest" >
     <classes>
   <class name ="TestScenario.brandTest">
-	  <methods>
-		  <include name="CheckOutScenario"></include>
-	  </methods>
+	 
 	  </class>
   </classes>
   </test> <!-- Test -->
