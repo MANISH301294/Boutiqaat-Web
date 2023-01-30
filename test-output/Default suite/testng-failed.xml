@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScenario.brandTest">
+      <class name="TestScenario.HelpingTest">
         <methods>
           <include name="initializeDriver"/>
-          <include name="CheckOutScenario" invocation-numbers="0"/>
+          <include name="Link"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestScenario.brandTest -->
+      </class> <!-- TestScenario.HelpingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

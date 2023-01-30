@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [BrandTest]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="baseTest.Listeners"/>
-  </listeners>
-  <test thread-count="5" parallel="tests" name="brandTest(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScenario.brandTest">
+      <class name="TestScenario.HelpingTest">
         <methods>
           <include name="initializeDriver"/>
-          <include name="ErrorValidationTest"/>
+          <include name="Link"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- TestScenario.brandTest -->
+      </class> <!-- TestScenario.HelpingTest -->
     </classes>
-  </test> <!-- brandTest(failed) -->
-</suite> <!-- Failed suite [BrandTest] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

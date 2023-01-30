@@ -35,6 +35,7 @@ import pageObjectModel.CategoryPage;
 import pageObjectModel.Celebritypage;
 import pageObjectModel.CheckOutPage;
 import pageObjectModel.Country;
+import pageObjectModel.FooterPage;
 import pageObjectModel.HomePage;
 import pageObjectModel.LoginPage;
 import pageObjectModel.MiniCartPage;
@@ -204,6 +205,13 @@ public class BaseTests {
 	public OrderHistoryPage Order_History() {
 		OrderHistoryPage order = new OrderHistoryPage(driver);
 		return order;
+	}
+	
+	public FooterPage footer_page()
+	{
+		FooterPage foot = new FooterPage(driver);
+		
+		return foot;
 	}
 
 	// DataReader code - from JSON to HASHMAP

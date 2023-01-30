@@ -1,8 +1,11 @@
 package pageObjectModel;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,17 +30,56 @@ public class FooterPage extends AbstractComponent  {
 	@FindBy(xpath="//footer")
 	WebElement Footerdriver;
 	
+	@FindBy(xpath="(//div[@class='col']/ul)[1]")
+	WebElement FooterSection;
+	
+
 	
 	
-	public void windowHandle()
+	public void windowHandleBySection()
 	{
-		System.out.println(Footerdriver.findElements(By.tagName("a")).size());
-		
-		
-		
-		
-	 
-		
+		List<WebElement>  links = FooterSection.findElements(By.tagName("a"));
+	    System.out.println(links.size());
+	    
+	     for(WebElement link:links)
+	     {
+	    	 String ClickOnTab = Keys.chord(Keys.COMMAND,Keys.ENTER);
+	    	 link.sendKeys(ClickOnTab);
+	     }
+	     
+	   Set<String> tab=  driver.getWindowHandles();
+	  Iterator<String> it =  tab.iterator();
+	  while(it.hasNext())
+	  {
+		  driver.switchTo().window(it.next());
+		  System.out.println(driver.getTitle());
+		  driver.close();
+	  }
+	
+	}
+	
+	public void CompleteFooterLink()
+	{
+	List<WebElement> links	= Footerdriver.findElements(By.tagName("a"));
+	System.out.println(links.size());
+	
+	for(WebElement link:links)
+	{
+	String ClickOnTab = Keys.chord(Keys.COMMAND,Keys.ENTER);
+	link.sendKeys(ClickOnTab);
+	}
+	
+	      Set<String> tab = driver.getWindowHandles();
+	      Iterator<String> it =  tab.iterator();
+	      
+	      while(it.hasNext())
+	      {
+	    	 driver.switchTo().window(it.next());
+	    	 System.out.println(driver.getTitle());
+	    	 driver.close();
+	      }
+	
+	
 	}
 	
 	
