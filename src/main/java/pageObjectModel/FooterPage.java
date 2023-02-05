@@ -34,8 +34,6 @@ public class FooterPage extends AbstractComponent  {
 	WebElement FooterSection;
 	
 
-	
-	
 	public void windowHandleBySection()
 	{
 		List<WebElement>  links = FooterSection.findElements(By.tagName("a"));
