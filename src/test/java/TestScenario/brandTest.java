@@ -17,7 +17,7 @@ public class brandTest extends BaseTests {
 	public void CheckOutScenario(HashMap<String, String> input) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		LaunchApplication();
-		Login().LoginUser("Test-Manish@Boutiqaat.com", "Tester");
+		Login().LoginUser("Boutiqaattestorders21@boutiqaat.com", "qwertY");
 		Home_Page().Country_Name();
 		Country_change().country("Iraq");
 		Home_Page().WishList();
