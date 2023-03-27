@@ -65,8 +65,7 @@ public class BaseTests {
 		{
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("incognito");
-		
+		options.addArguments("incognito").addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
 		}
 		if(browserName.equalsIgnoreCase("firefox"))

@@ -49,6 +49,13 @@
 			<artifactId>maven-resources-plugin</artifactId>
 			<version>3.3.0</version>
 		</dependency>
+		
+		 <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-http-jdk-client</artifactId>
+        <version>4.8.1</version>
+ </dependency>
+ 
 	</dependencies>
 	<profiles>
 		<profile>

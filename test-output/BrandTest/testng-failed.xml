@@ -9,6 +9,7 @@
       <class name="TestScenario.brandTest">
         <methods>
           <include name="initializeDriver"/>
+          <include name="CheckOutScenario"/>
           <include name="ErrorValidationTest"/>
           <include name="tearDown"/>
         </methods>
